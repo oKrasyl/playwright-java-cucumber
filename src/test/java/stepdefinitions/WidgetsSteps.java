@@ -3,7 +3,7 @@ package stepdefinitions;
 import factory.DriverFactory;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import pages.WidgetsPage;
 
 public class WidgetsSteps {
@@ -21,7 +21,7 @@ public class WidgetsSteps {
 
     @Then("^verify Blue color is selected in Single color name in Auto Complete section in Widgets page$")
     public void verifyBlueColourSelected() {
-        Assert.assertTrue(widgetsPage.verifyBlueColourSelected());
+        Assertions.assertTrue(widgetsPage.verifyBlueColourSelected());
     }
 
     @When("^user hovers over button in Tool Tips section in Widgets page$")
@@ -31,7 +31,7 @@ public class WidgetsSteps {
 
     @Then("^verify \"([^\"]*)\" tooltip is displayed in Tool Tips section in Widgets page$")
     public void verifyTooltip(String toolTip) {
-        Assert.assertTrue(widgetsPage.verifyTooltip(toolTip));
+        Assertions.assertTrue(widgetsPage.verifyTooltip(toolTip));
     }
 
     @When("^user selects \"([^\"]*)\" in Old Style Select Menu in Select Menu section in Widgets page$")

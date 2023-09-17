@@ -3,7 +3,7 @@ package stepdefinitions;
 import factory.DriverFactory;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import pages.ElementsPage;
 
 public class ElementsSteps {
@@ -26,7 +26,7 @@ public class ElementsSteps {
 
     @Then("^verify submitted text is displayed in Text Box section in Elements page$")
     public void verifySubmittedText() {
-        Assert.assertTrue(elementsPage.verifySubmittedText());
+        Assertions.assertTrue(elementsPage.verifySubmittedText());
     }
 
     @When("^user clicks on Home checkbox in Check Box section in Elements page$")
@@ -36,17 +36,17 @@ public class ElementsSteps {
 
     @Then("^verify that \"([^\"]*)\" checkbox selected text is displayed in Check Box section in Elements page$")
     public void verifyCheckboxSelectedText(String checkBoxText) {
-        Assert.assertTrue(elementsPage.verifyCheckboxSelectedText(checkBoxText));
+        Assertions.assertTrue(elementsPage.verifyCheckboxSelectedText(checkBoxText));
     }
 
     @Then("^verify that No radio button is disabled in Radio Button section in Elements page$")
     public void verifyNoRadioButtonDisabled() {
-        Assert.assertTrue(elementsPage.verifyNoRadioButtonDisabled());
+        Assertions.assertTrue(elementsPage.verifyNoRadioButtonDisabled());
     }
 
     @Then("^verify that \"([^\"]*)\" is first column header in Web Tables section in Elements page$")
     public void verifyFirstColumnTableHeader(String headerName) {
-        Assert.assertTrue(elementsPage.verifyFirstColumnTableHeader(headerName));
+        Assertions.assertTrue(elementsPage.verifyFirstColumnTableHeader(headerName));
     }
 
     @When("^user edits Cierra entry in Web Tables section in Elements page$")
@@ -56,7 +56,7 @@ public class ElementsSteps {
 
     @Then("^user verifies Registration Form is displayed in Web Tables section in Elements page$")
     public void verifyRegistrationForm() {
-        Assert.assertTrue(elementsPage.verifyRegistrationForm());
+        Assertions.assertTrue(elementsPage.verifyRegistrationForm());
     }
 
     @When("^user clicks on Close button in Registration Form in Web Tables section in Elements page$")
@@ -71,7 +71,7 @@ public class ElementsSteps {
 
     @Then("^user verifies \"([^\"]*)\" click success message in Buttons section in Elements page$")
     public void verifyClickSuccessMsg(String clickType) {
-        Assert.assertTrue(elementsPage.verifyClickSuccessMsg(clickType));
+        Assertions.assertTrue(elementsPage.verifyClickSuccessMsg(clickType));
     }
 
     @Then("^verify user is able to download file in Upload and Download section in Elements page$")
@@ -86,7 +86,7 @@ public class ElementsSteps {
 
     @Then("^verify \"([^\"]*)\" is uploaded successfully in Upload and Download section in Elements page$")
     public void verifyFileUpload(String fileName) {
-        Assert.assertTrue(elementsPage.verifyFileUpload(fileName));
+        Assertions.assertTrue(elementsPage.verifyFileUpload(fileName));
     }
 
 }

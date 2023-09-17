@@ -3,7 +3,7 @@ package stepdefinitions;
 import factory.DriverFactory;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import pages.AlertsFramesWindowsPage;
 
 public class AlertsFramesWindowsSteps {
@@ -16,12 +16,12 @@ public class AlertsFramesWindowsSteps {
 
     @Then("^verify \"([^\"]*)\" is url of new tab opened in Browser Windows section in Alerts, Frame & Windows page$")
     public void verifyNewTabURL(String newTabURL) {
-        Assert.assertTrue(alertsFramesWindowsPage.verifyNewTabURL(newTabURL));
+        Assertions.assertTrue(alertsFramesWindowsPage.verifyNewTabURL(newTabURL));
     }
 
     @Then("^verify \"([^\"]*)\" is url of new window opened in Browser Windows section in Alerts, Frame & Windows page$")
     public void verifyNewWinURL(String newWinURL) {
-        Assert.assertTrue(alertsFramesWindowsPage.verifyNewWinURL(newWinURL));
+        Assertions.assertTrue(alertsFramesWindowsPage.verifyNewWinURL(newWinURL));
     }
 
     @When("^user enters \"([^\"]*)\" text and accept the alert in Alerts section in Alerts, Frame & Windows page$")
@@ -31,16 +31,16 @@ public class AlertsFramesWindowsSteps {
 
     @Then("^verify \"([^\"]*)\" text is accepted in alert in Alerts section in Alerts, Frame & Windows page$")
     public void verifyAlertText(String alertText) {
-        Assert.assertTrue(alertsFramesWindowsPage.verifyAlertText(alertText));
+        Assertions.assertTrue(alertsFramesWindowsPage.verifyAlertText(alertText));
     }
 
     @Then("^verify \"([^\"]*)\" as frame content in Frames section in Alerts, Frame & Windows page$")
     public void verifyFrameText(String frameText) {
-        Assert.assertTrue(alertsFramesWindowsPage.verifyFrameText(frameText));
+        Assertions.assertTrue(alertsFramesWindowsPage.verifyFrameText(frameText));
     }
 
     @Then("^verify Nested Child frame is displayed in Nested Frames section in Alerts, Frame & Windows page$")
     public void verifyNestedFrameChildText() {
-        Assert.assertTrue(alertsFramesWindowsPage.verifyNestedFrameChildText());
+        Assertions.assertTrue(alertsFramesWindowsPage.verifyNestedFrameChildText());
     }
 }

@@ -4,7 +4,7 @@ import factory.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import pages.LoginPage;
 import utils.WebActions;
 
@@ -38,12 +38,12 @@ public class LoginSteps {
 
     @Then("verify that user is logged in and navigated to Profile page")
     public void verifyProfilePage() {
-        Assert.assertTrue(loginPage.verifyProfilePage());
+        Assertions.assertTrue(loginPage.verifyProfilePage());
     }
 
     @Then("^user verifies data as \"([^\"]*)\" in \"([^\"]*)\" row and \"([^\"]*)\" column from \"([^\"]*)\" sheet in \"([^\"]*)\" file")
     public void clickOnIcon(String expectedValue, int rowNum, int colNum, String sheetName, String fileName) {
         String actualValue = WebActions.getRowColValue(fileName, sheetName, rowNum, colNum);
-        Assert.assertEquals(expectedValue, actualValue);
+        Assertions.assertEquals(expectedValue, actualValue);
     }
 }
